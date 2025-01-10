@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007bff">
+    <title>Weight Calculator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="installPrompt">
+        Install App
+    </div>
+
+    <div class="calculator">
+        <h1 class="title">Product Weight Calculator</h1>
+        
+        <div class="input-group">
+            <label>Select Category:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="8mm" name="category" value="8Ø">
+                    <label for="8mm">8Ø</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="6mm" name="category" value="6Ø">
+                    <label for="6mm">6Ø</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="sonstiges" name="category" value="Sonstiges">
+                    <label for="sonstiges">Sonst.</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="strom" name="category" value="Strom">
+                    <label for="strom">Strom</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="product">Select Product:</label>
+            <select id="product" disabled>
+                <option value="">First select a category</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="boxWeight">Box Total Weight:</label>
+            <input type="number" id="boxWeight" placeholder="Enter box weight" step="any">
+        </div>
+
+        <div class="weight-display" id="weightDisplay">Product Weight: - kg</div>
+
+        <div class="buttons">
+            <button class="calculate-btn" onclick="calculateItems()">Calculate</button>
+            <button class="clear-btn" onclick="clearInputs()">Clear</button>
+        </div>
+
+        <div id="error" class="error"></div>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
